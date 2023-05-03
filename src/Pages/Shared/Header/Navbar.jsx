@@ -10,7 +10,7 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className="flex-none">
-                <ul className="menu menu-horizontal">
+                <ul className="menu menu-horizontal text-sky-300">
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/blog'>Blog</Link></li>
                     <li><Link to='/login'>Login</Link></li>
