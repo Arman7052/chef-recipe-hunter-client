@@ -7,13 +7,14 @@ import Chefs from '../Pages/Chefs/chefs';
 import ChefsCard from '../Pages/Chefs/ChefsCard';
 import NotFound from '../Pages/NotFound';
 import Recipes from '../Pages/Recipes/Recipes';
+import Error from '../Pages/Error';
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
-
+        errorElement:<Error></Error>,
         children: [
             {
                 path: '/',
