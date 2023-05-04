@@ -35,11 +35,11 @@ const Register = () => {
     return (
         <div>
             <Header />
-            <div className="flex justify-center items-center h-screen px-8">
+            <div className="flex justify-center items-center px-8">
                 <form onSubmit={handleRegister} className="w-full max-w-md bg-red-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <h2 className="text-xl font-bold mb-6">Register</h2>
                     <div className="mb-4">
-                        <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
+                        <label className="block text-gray-500 font-bold mb-2" htmlFor="name">
                             Name
                         </label>
                         <input
@@ -51,7 +51,7 @@ const Register = () => {
                         />
                     </div>
                     <div className="mb-4">
-                        <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+                        <label className="block text-gray-500 font-bold mb-2" htmlFor="email">
                             Email
                         </label>
                         <input
@@ -63,7 +63,7 @@ const Register = () => {
                         />
                     </div>
                     <div className="mb-4">
-                        <label className="block text-gray-700 font-bold mb-2" htmlFor="photo_url">
+                        <label className="block text-gray-500 font-bold mb-2" htmlFor="photo_url">
                             Photo URL
                         </label>
                         <input
@@ -75,7 +75,7 @@ const Register = () => {
                         />
                     </div>
                     <div className="mb-6">
-                        <label className="block text-gray-700 font-bold mb-2" htmlFor="password">
+                        <label className="block text-gray-500 font-bold mb-2" htmlFor="password">
                             Password
                         </label>
                         <input
@@ -97,7 +97,7 @@ const Register = () => {
                     </div>
                 </form>
             </div>
-            <div className=' text-center '>
+            <div className=' text-center pb-20'>
                 <p className=''>Register with </p>
                 <div className='  flex justify-center gap-3  mt-3 '>
 
