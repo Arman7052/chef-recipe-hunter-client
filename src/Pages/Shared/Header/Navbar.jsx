@@ -5,7 +5,13 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error))
+    }
     return (
         <div>
             <div className="navbar text-lime-800 lg:font-bold px-10">
@@ -25,7 +31,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             {user ?
-                                <Link to='/'>logout</Link> :
+                                <Link onClick={handleLogout} to='/'>logout</Link> :
                                 <Link to='/login'>login</Link>
                             }
                         </li>
