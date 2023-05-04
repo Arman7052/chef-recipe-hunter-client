@@ -3,6 +3,7 @@ import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { Link } from 'react-router-dom';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 
 const Register = () => {
@@ -29,7 +30,7 @@ const Register = () => {
         })
 
     }
-    
+
 
   return (
     <div>
@@ -96,6 +97,14 @@ const Register = () => {
           </div>
         </form>
       </div>
+      <div className=' text-center '>
+                <p className=''>Register wth </p>
+                <div className='  flex justify-center gap-3  mt-3 '>
+
+                    <div className=''><button className=" btn lg:btn-wide btn-outline btn-error"><span className=' mr-2'><FaGoogle></FaGoogle> </span> Google</button></div>
+                    <div><button className="btn lg:btn-wide btn-outline"><span className=' mr-2'><FaGithub></FaGithub> </span>GitHub</button></div>
+                </div>
+            </div>
       <Footer />
     </div>
   );
