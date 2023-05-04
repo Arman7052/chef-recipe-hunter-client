@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBp_6j5QtYco7NVQenLFLq4wYi0czq8KP4",
-  authDomain: "taste-bengel.firebaseapp.com",
-  projectId: "taste-bengel",
-  storageBucket: "taste-bengel.appspot.com",
-  messagingSenderId: "284288185104",
-  appId: "1:284288185104:web:7941d8f0f46f6e8e25eb95"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
