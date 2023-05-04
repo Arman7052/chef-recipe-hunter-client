@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import { FaRegUserCircle } from 'react-icons/fa';
 const Navbar = () => {
 
     return (
@@ -13,7 +13,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal text-sky-300">
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/blog'>Blog</Link></li>
-                    <li><Link to='/login'>Login</Link></li>
+                    <li><Link to='/login'><FaRegUserCircle/></Link></li>
                     <li><Link to='/signUp'>Sign Up</Link></li>
                    
                 </ul>

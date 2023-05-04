@@ -5,11 +5,11 @@ import ChefsCard from './ChefsCard';
 const Chefs = () => {
    
     const chefsDetails = useLoaderData();
-    console.log(chefsDetails);
+    // console.log(chefsDetails);
 
     return (
-        <div className=' mx-5 lg:mx-20  text-center italic py-10'>
-            <h1 className='py-10  font-bold text-2xl text-indigo-700'>Meet our Chefs</h1>
+        <div className=' mx-5 lg:mx-20  text-center italic py-2'>
+            <h1 className='py-5  font-bold text-2xl text-indigo-700'>Meet our Chefs</h1>
 
             <div className='grid lg:grid-cols-3 gap-3'>
                 {
