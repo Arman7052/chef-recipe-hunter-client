@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Marquee from "react-fast-marquee";
 
 const Pithas = () => {
 
@@ -17,26 +18,17 @@ const Pithas = () => {
     }
 
     return (
-        <div>
-            <div>
+        <div className=' ml-6 lg:mx-20 text-center pb-10'>
+            <p className=' py-4 text-sky-400 text-lg lg:text-3xl lg:py-10 font-semibold'>Delicious Cakes Of Bangladesh</p>
+            <div className=' grid grid-cols-2 lg:grid-cols-5   rounded-lg '>
                 {
                     pithasData.map(pitha => (
-                        <div key={pitha.id}>
-                            <div>
-                                {/* The image to open modal */}
-                                <img src={pitha.image} alt={pitha.name} onClick={openModal} />
-
-                                {/* Put this part before </body> tag */}
-                                <input type="checkbox" id="my-modal-6" className="modal-toggle" />
-                                <div className="modal modal-bottom sm:modal-middle">
-                                    <div className="modal-box">
-                                        <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
-                                        <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                                        <div className="modal-action">
-                                            <label htmlFor="my-modal-6" className="btn">Yay!</label>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div className=' rounded-lg ' key={pitha.id}>
+                            <div className=' text-start font-semibold  rounded-lg '>
+                             
+                                <img className=' h-40 w-40 p-2' src={pitha.image} alt={pitha.name} onClick={openModal} />
+                               <p className=''> <Marquee>{pitha.name}</Marquee></p>
+                               
                             </div>
                         </div>
                     ))
