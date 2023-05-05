@@ -2,6 +2,7 @@ import ChefsCard from './ChefsCard';
 import Marquee from "react-fast-marquee";
 import { useLoaderData } from 'react-router-dom';
 import Pithas from '../ExtraSection/Pithas';
+import StreetFood from '../ExtraSection/StreetFood';
 
 
 const Chefs = () => {
@@ -44,6 +45,7 @@ const Chefs = () => {
                 </div>
 
             </div>
+            <StreetFood></StreetFood>
         </div>
     );
 };

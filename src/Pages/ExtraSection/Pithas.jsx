@@ -12,10 +12,7 @@ const Pithas = () => {
 
     }, [])
 
-    const openModal = () => {
-        const modal = document.getElementById("my-modal-6");
-        modal.checked = true;
-    }
+   
 
     return (
         <div className=' ml-6 lg:mx-20 text-center pb-10'>
@@ -26,7 +23,7 @@ const Pithas = () => {
                         <div className=' rounded-lg ' key={pitha.id}>
                             <div className=' text-start font-semibold  rounded-lg '>
                              
-                                <img className=' h-40 w-40 p-2' src={pitha.image} alt={pitha.name} onClick={openModal} />
+                                <img className=' h-40 w-40 p-2' src={pitha.image} alt={pitha.name}/>
                                <p className=''> <Marquee>{pitha.name}</Marquee></p>
                                
                             </div>

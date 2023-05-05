@@ -38,7 +38,11 @@ const router = createBrowserRouter([
             },
 
 
-
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+        
 
         ]
     },
@@ -50,11 +54,7 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
     },
-    {
-        path: '/blog',
-        element: <Blog></Blog>
-    },
-
+    
     {
         path: "*",
         element: <NotFound></NotFound>
