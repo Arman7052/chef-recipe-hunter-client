@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import Main from '../Pages/Layouts/Main';
+
 
 import Blog from '../Pages/Blog';
 import Chefs from '../Pages/Chefs/chefs';
@@ -10,12 +10,16 @@ import Login from '../Pages/Login/Login';
 import Register from '../Pages/Login/Register';
 import Error from '../Pages/Error';
 import Pithas from '../Pages/ExtraSection/Pithas';
+import About from '../Pages/About';
 
+
+const Main = React.lazy(() => import('../Pages/Layouts/Main'))
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Main></Main>,
+        element: <Suspense fallback={<p className='top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-screen text-center py-5 font-bold text-9xl'>Please wait...</p>
+        }> <Main></Main></Suspense>,
         errorElement: <Error></Error>,
         children: [
             {
@@ -28,7 +32,8 @@ const router = createBrowserRouter([
 
             {
                 path: '/recipes/:id',
-                element: <Recipes></Recipes>,
+                element: <Suspense fallback={<p className='top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-screen text-center py-5 font-bold text-9xl'>Please wait...</p>
+                }>  <Recipes></Recipes></Suspense>,
                 loader: ({ params }) => fetch(`https://taste-of-bengal-server-arman1e28.vercel.app/chefrecipe/${params.id}`)
             },
 
@@ -42,7 +47,11 @@ const router = createBrowserRouter([
                 path: '/blog',
                 element: <Blog></Blog>
             },
-        
+            {
+                path: '/about',
+                element: <About></About>
+            }
+
 
         ]
     },
@@ -54,7 +63,7 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
     },
-    
+
     {
         path: "*",
         element: <NotFound></NotFound>

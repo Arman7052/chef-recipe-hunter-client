@@ -44,6 +44,16 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
+                            <Link
+                                to='/about'
+                                className={`${
+                                    location.pathname === '/about' ? 'font-bold' : ''
+                                }`}
+                            >
+                                About
+                            </Link>
+                        </li>
+                        <li>
                             {user &&
                                 <Link to='/login'>
                                     <img src={user.photo_URL} alt="User Profile" className="h-8 w-8 rounded-full" />
@@ -51,8 +61,12 @@ const Navbar = () => {
                         </li>
                         <li>
                             {user ?
-                                <Link onClick={handleLogout} to='/'>logout</Link> :
-                                <Link to='/login'> Login</Link>
+                                <Link onClick={handleLogout} to='/' className={`${
+                                    location.pathname === '/' ? 'font-bold' : ''
+                                }`}>logout</Link> :
+                                <Link to='/login'  className={`${
+                                    location.pathname === '/login' ? 'font-bold' : ''
+                                }`}> Login</Link>
                             }
                         </li>
 
@@ -64,4 +78,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
