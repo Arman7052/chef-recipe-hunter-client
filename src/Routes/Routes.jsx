@@ -9,6 +9,7 @@ import Recipes from '../Pages/Recipes/Recipes';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Login/Register';
 import Error from '../Pages/Error';
+import Pithas from '../Pages/ExtraSection/Pithas';
 
 
 const router = createBrowserRouter([
@@ -19,37 +20,46 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element:<Chefs></Chefs> ,
+                element: <Chefs></Chefs>,
                 loader: () => fetch('https://taste-of-bengal-server-arman1e28.vercel.app/chefrecipe')
-                
+
             },
-            
+
+
             {
-                path: '/blog',
-                element: <Blog></Blog>
-            },
-           
-            {
-                path:'/recipes/:id',
+                path: '/recipes/:id',
                 element: <Recipes></Recipes>,
-                loader: ({params}) => fetch(`https://taste-of-bengal-server-arman1e28.vercel.app/chefrecipe/${params.id}`)
+                loader: ({ params }) => fetch(`https://taste-of-bengal-server-arman1e28.vercel.app/chefrecipe/${params.id}`)
             },
 
             {
-                path:"*",
-                element: <NotFound></NotFound>
-              },
-            
+                path: '/pithas',
+                element: <Pithas></Pithas>,
+            },
+
+
+
+
         ]
     },
     {
-        path:'/login',
+        path: '/login',
         element: <Login></Login>
     },
     {
-        path:'/register',
+        path: '/register',
         element: <Register></Register>
-    }
+    },
+    {
+        path: '/blog',
+        element: <Blog></Blog>
+    },
+
+    {
+        path: "*",
+        element: <NotFound></NotFound>
+    },
+
 ]);
 
 

@@ -21,6 +21,10 @@ const ChefsCard = ({chef}) => {
                 </div>
             </div>
 
+            <div>
+                
+            </div>
+
         </div>
     );
 };

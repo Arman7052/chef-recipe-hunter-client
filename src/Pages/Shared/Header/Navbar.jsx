@@ -26,13 +26,14 @@ const Navbar = () => {
                         <li><Link to='/blog'>Blog</Link></li>
                         <li>
                             {user &&
-                                <Link to='/login'><FaRegUserCircle />{user.displayName}
+                                <Link to='/login'>
+                                    <img src={user.photo_URL} alt="User Profile" className="h-8 w-8 rounded-full" />
                                 </Link>}
                         </li>
                         <li>
                             {user ?
                                 <Link onClick={handleLogout} to='/'>logout</Link> :
-                                <Link to='/login'>login</Link>
+                                <Link to='/login'> Login</Link>
                             }
                         </li>
 
@@ -42,6 +43,5 @@ const Navbar = () => {
         </div>
     );
 };
-
 
 export default Navbar;
