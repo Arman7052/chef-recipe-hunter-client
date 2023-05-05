@@ -22,7 +22,7 @@ const Chefs = () => {
 
                         <div className="absolute lg:flex  top-0 left-0 right-0 text-white text-center align-middle px-4 bg-black bg-opacity-50">
 
-                            <div> <img className=' h-60 lg:h-auto w-auto' src="https://i.ibb.co/S75fHBb/we-are.png" alt="" /></div>
+                            <div > <img className=' h-60 lg:h-auto w-auto' src="https://i.ibb.co/S75fHBb/we-are.png" alt="" /></div>
 
                             <div><Marquee><h1 className="text-3xl text-orange-600  font-semibold italic py-14 lg:py-44">
                                 Welcome to Taste Bengal, the ultimate destination for experiencing the rich and diverse cuisine of Bengal  .

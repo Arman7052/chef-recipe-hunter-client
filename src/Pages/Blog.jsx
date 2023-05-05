@@ -6,6 +6,8 @@ const Blog = () => {
             <h1 className=' font-bold text-3xl py-10  bg-red-100 text-indigo-300'>Blog</h1>
             <div className='px-20 py-10 pb-20 bg-red-100'>
 
+            <div className=' text-end'><button className=' py-2  hover:text-white text-lg hover:bg-emerald-500 bg-red-300 px-10 rounded-lg'>PDF</button></div>
+
                 <div className='border-2 py-2 my-4 bg-violet-300	rounded-md'>
                     <h1 className='bg-gray-100	font-bold text-xl  m-3 mr-4 rounded-md h-auto p-2 shadow-sm'> The differences between uncontrolled and controlled components.</h1>
                     <p className='bg-gray-50	font-bold text-text-sm text-justify	 m-2 border-2 rounded-md h-auto p-2 shadow-lg'>Uncontrolled components refer to parts of a system that function autonomously and are not under the system's direct management. Controlled components, on the other hand, are governed and directed by the system. Uncontrolled components operate without predictability or control, whereas controlled components can be configured to perform specific tasks within the system.</p>
@@ -22,6 +24,7 @@ const Blog = () => {
                     <h1 className='bg-gray-100	font-bold text-xl  m-3 mr-4 rounded-md h-auto p-2 shadow-sm'>What is a custom hook, and why will you create a custom hook?</h1>
                     <p className='bg-gray-50	font-bold text-text-sm text-justify	 m-2 border-2 rounded-md h-auto p-2 shadow-lg'>A custom hook is a reusable function in React that allows you to extract common code from components into a separate function, simplifying logic, and making it more reusable, composable, testable, and maintainable.</p>
                 </div>
+               
             </div>
         </div>
     );

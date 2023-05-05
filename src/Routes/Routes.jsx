@@ -18,8 +18,7 @@ const Main = React.lazy(() => import('../Pages/Layouts/Main'))
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Suspense fallback={<p className='top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-screen text-center py-5 font-bold text-9xl'>Please wait...</p>
-        }> <Main></Main></Suspense>,
+        element: <Suspense fallback= {<p className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-screen text-center font-bold text-9xl'>Please wait....</p>}> <Main></Main></Suspense>,
         errorElement: <Error></Error>,
         children: [
             {
@@ -32,8 +31,7 @@ const router = createBrowserRouter([
 
             {
                 path: '/recipes/:id',
-                element: <Suspense fallback={<p className='top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-screen text-center py-5 font-bold text-9xl'>Please wait...</p>
-                }>  <Recipes></Recipes></Suspense>,
+                element:  <Recipes></Recipes>,
                 loader: ({ params }) => fetch(`https://taste-of-bengal-server-arman1e28.vercel.app/chefrecipe/${params.id}`)
             },
 
@@ -51,7 +49,7 @@ const router = createBrowserRouter([
                 path: '/about',
                 element: <About></About>
             }
-
+        
 
         ]
     },
@@ -63,7 +61,7 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
     },
-
+    
     {
         path: "*",
         element: <NotFound></NotFound>
